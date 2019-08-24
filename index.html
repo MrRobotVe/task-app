@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task App</title>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">Task App</a>
+        
+        <ul class="navbar-nav ml-auto">
+            <form class="form-inline my-2 my-lg-0">
+                <input type="search" class="form-control mr-sm-2" id="search" placeholder="Search your task">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">
+                    Search
+                </button>
+            </form>
+        </ul>
+    </nav>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="task-form">
+                            <input type="hidden" id="id">
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-control" placeholder="Task name">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="description" cols="30" rows="10" placeholder="Task description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block text-center">
+                                Save Task
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="card my-4" id='task-result'>
+                    <div class="card-body">
+                        <ul id="container"></ul>
+                    </div>
+                </div>
+                <table class="table table-bordered table-sm mt-5">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="src/App.js"></script>
+</body>
+</html>
